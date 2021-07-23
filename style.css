@@ -1,0 +1,139 @@
+html {
+  font-size: 62.5%; /* 16px x 62.5 = 10px = 1rem */
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  height: 100vh;
+  font-size: 1.6rem;
+  font-family: "EB Garamond", serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Layout */
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: 5rem 1fr 5rem;
+  height: 100%;
+}
+header {
+  grid-area: header;
+  background-color: #dba8b8;
+}
+main {
+  grid-area: main;
+  padding: 1rem;
+}
+footer {
+  grid-area: footer;
+  background-color: #dba8b8;
+  color: #ffffff;
+}
+
+h1 {
+  font-size: 6rem;
+  padding: 0.1rem 0;
+  text-align: center;
+}
+h2 {
+  font-size: 3rem;
+  padding: 0.1rem 0;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  color: #000;
+}
+
+/* Common */
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  justify-content: space-evenly;
+}
+li {
+  margin: 5rem;
+  text-align: center;
+}
+/* Header */
+header a {
+  color: #ffffff;
+  padding: 1rem;
+}
+a.brand {
+  color: #ffffff;
+  font-size: 3rem;
+  font-weight: bold;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.row.center {
+  justify-content: center;
+}
+
+/* section1 */
+.background-image {
+  background-image: url("./images/4.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  color: #ffffff;
+  height: 40rem;
+}
+
+/* columns */
+.column {
+  float: left;
+  width: 33.33%;
+}
+/* Clear floats after the columns */
+.row1:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.col-h2 {
+  font-size: 1.6rem;
+}
+
+.col-p,
+.col-h2 {
+  text-align: center;
+}
+
+/* responsive media queries*/
+
+@media only screen and (max-width: 600px) {
+  .grid-container {
+    grid-template-rows: 11rem 1fr 5rem;
+  }
+  .column {
+    width: 100%;
+    vertical-align: middle;
+    margin-top: -1rem;
+  }
+  h1 {
+    font-size: larger;
+  }
+  .col-p,
+  .col-h2 {
+    font-size: small;
+    margin-left: 2rem;
+    margin-right: 30rem;
+    font-weight: bold;
+  }
+}
