@@ -1,9 +1,18 @@
+// IMPORT STATEMENTS
 import data from "./data.js";
 
-const card = document.querySelector(".card");
+// ELEMENT VARIABLES
+const cardEl = document.querySelector(".card");
+const messageEl = document.createElement("div");
+const headerEl = document.querySelector(".top");
 
+/**
+ * Map function iteratates over data array of technician objects rendering each techs' information
+ * (*) tech
+ * returns card.innerHTML
+ */
 data.techs.map((tech) => {
-  card.innerHTML += `<div class="card key=${tech._id}">
+  cardEl.innerHTML += `<div class="card key=${tech._id}">
     <div class="card-body">
     <img class="medium" src="${tech.image}" alt="technician picture" />
         <h3>${tech.name}</h3>
@@ -16,3 +25,15 @@ data.techs.map((tech) => {
     </div>
     </div>`;
 });
+
+messageEl.innerHTML = `We use cookies for improved functionality and analytics &nbsp <button class="btn btn--close-cookie btn--text">Got It!</button>`;
+
+//console.log(messageEl.innerHTML);
+
+headerEl.append(messageEl);
+
+document
+  .querySelector(".btn--close-cookie")
+  .addEventListener("click", function () {
+    messageEl.remove();
+  });
