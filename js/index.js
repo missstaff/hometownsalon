@@ -49,10 +49,11 @@ data.techs.map((tech) => {
  * @returns headerEl
  */
 const cookieMessage = () => {
-  messageEl.innerHTML = `We use cookies for improved functionality and analytics<button class="btn btn--close-cookie btn--text">Got It!</button>`;
+  messageEl.innerHTML = `We use cookies for improved functionality and analytics &nbsp<button class="btn btn--close-cookie btn--text">Got It!</button>`;
   //console.log(messageEl.innerHTML);
 
   messageEl.style.textAlign = "center";
+  messageEl.style.backgroundColor = "#dba8b8";
 
   return footerEl.after(messageEl);
 };
