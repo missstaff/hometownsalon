@@ -1,10 +1,28 @@
-// IMPORT STATEMENTS
+// Author: Shawna (Miss) Staff
+
+// IMPORT STATEMENTS //
+
 import data from "./data.js";
 
 // ELEMENT VARIABLES
+
 const cardEl = document.querySelector(".card");
+const footerEl = document.querySelector(".footer");
 const messageEl = document.createElement("div");
-const headerEl = document.querySelector(".top");
+
+// EVENT HANDLERS //
+
+/**
+ * removes cookie message
+ */
+const closeCookie = () =>
+  document
+    .querySelector(".btn--close-cookie")
+    .addEventListener("click", function () {
+      messageEl.remove();
+    });
+
+// FUNCTIONS //
 
 /**
  * Map function iteratates over data array of technician objects rendering each techs' information
@@ -26,14 +44,19 @@ data.techs.map((tech) => {
     </div>`;
 });
 
-messageEl.innerHTML = `We use cookies for improved functionality and analytics &nbsp <button class="btn btn--close-cookie btn--text">Got It!</button>`;
+/**
+ * appends cookie message to footer element
+ * @returns headerEl
+ */
+const cookieMessage = () => {
+  messageEl.innerHTML = `We use cookies for improved functionality and analytics<button class="btn btn--close-cookie btn--text">Got It!</button>`;
+  //console.log(messageEl.innerHTML);
 
-//console.log(messageEl.innerHTML);
+  messageEl.style.textAlign = "center";
 
-headerEl.append(messageEl);
+  return footerEl.after(messageEl);
+};
 
-document
-  .querySelector(".btn--close-cookie")
-  .addEventListener("click", function () {
-    messageEl.remove();
-  });
+// FUNCTION CALLS
+cookieMessage();
+closeCookie();

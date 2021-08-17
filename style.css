@@ -11,7 +11,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Layout */
+/* LAYOUT */
 .grid-container {
   display: grid;
   grid-template-areas:
@@ -40,7 +40,7 @@ footer {
   background-color: #dba8b8;
 } */
 
-/* Header */
+/* HEADER */
 header a {
   color: #ffffff;
   padding: 1rem;
@@ -54,7 +54,7 @@ a.brand {
   font-weight: bold;
 }
 
-/* Common */
+/* COMMON */
 h1 {
   font-size: 6rem;
   padding: 0.1rem 0;
@@ -94,7 +94,7 @@ li {
   justify-content: center;
 }
 
-/* Image */
+/* IMAGE */
 img {
   border-radius: 0.5rem;
 }
@@ -103,7 +103,7 @@ img.medium {
   width: 100%;
 }
 
-/* Card */
+/* CARD */
 .card {
   background-color: #f8f8f8;
   border-radius: 0.5rem;
@@ -120,7 +120,7 @@ img.medium {
   margin-bottom: 0.5rem;
 }
 
-/* section1 */
+/* SECTION1 */
 .background-image {
   background-image: url("./images/nails.jpg");
   background-repeat: no-repeat;
@@ -129,17 +129,17 @@ img.medium {
   color: #ffffff;
   height: 40rem;
 }
-/* section2 */
+
+/* SECTION2 */
 /* .services {
   border: 0.1rem #c0c0c0 solid;
   background-color: #dba8b8;
 } */
 .techs {
-  /* border: 0.1rem #c0c0c0 solid; */
   background-color: #f8f8f8;
 }
 
-/* columns */
+/* COLUMNS */
 .column {
   float: left;
   width: 33.33%;
@@ -164,19 +164,17 @@ img.medium {
   align-items: center;
   justify-content: space-evenly;
   width: 100%;
-  background-color: white;
-  color: #bbb;
   font-size: 1.5rem;
   font-weight: 400;
 }
 
+/* COOKIE MESSAGE BUTTON */
 .btn {
-  display: inline-block;
+  display: inline-flex;
   font-size: 1.6rem;
   font-family: inherit;
   font-weight: 500;
-  border: 1px;
-  padding: 1.25rem 4.5rem;
+  padding: 0.25rem 0.75rem;
   border-radius: 10rem;
   cursor: pointer;
   transition: all 0.3s;
@@ -188,19 +186,17 @@ img.medium {
 
 .btn--text {
   display: inline-block;
-  background: none;
   font-size: 1.7rem;
   font-family: inherit;
   font-weight: 500;
   color: #000;
   background-color: #fff;
   border: none;
-
   cursor: pointer;
   transition: all 0.3s;
 }
 
-/* responsive media queries*/
+/* MEDIA QUERIES*/
 
 @media only screen and (max-width: 600px) {
   .grid-container {
